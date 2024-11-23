@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/websitelogo.svg"
+      type="image/x-icon"
+    />
+    <title>To-Do App</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!--Custom Css-->
+    <style>
+      .btn-outline-custom {
+        color: #836fff;
+        border-color: #836fff;
+        background-color: transparent;
+      }
+
+      .btn-outline-custom:hover {
+        color: white !important;
+        background-color: #836fff;
+        border-color: #836fff;
+      }
+
+      li {
+        animation: fadeIn 0.5s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <header></header>
+    <main>
+      <div class="container" style="max-width: max-width; margin-top: 80px">
+        <div class="row">
+          <div class="col-md-2 col-sm-0"></div>
+          <div
+            class="col-md-8 col-sm-12 p-5 shadow rounded"
+            style="background-color: #373838"
+          >
+            <h1 class="text-center text-white">
+              <i
+                class="bi bi-card-checklist me-2 fw-light"
+                style="color: #836fff"
+              ></i
+              >To Do List
+            </h1>
+            <div class="input-group mb-4 mt-5 text-wrap">
+              <input
+                type="text"
+                class="form-control"
+                id="taskInput"
+                placeholder="Add task"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-outline-custom"
+                type="button"
+                id="addTaskBtn"
+                style="color: #836fff"
+              >
+                Dodaj zadanie
+              </button>
+            </div>
+            <ol id="taskList" class="list-group list-group-numbered"></ol>
+          </div>
+          <div class="col-md-2 col-sm-0"></div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
